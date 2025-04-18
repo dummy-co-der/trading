@@ -1,0 +1,51 @@
+export const pricingPlans = [
+    {
+        title: "Free",
+        price: "$0",
+        duration: "/month",
+        forWhom: "Perfect for getting started",
+        features: ["Basic analytics", "Up to 5 projects", "Community support"],
+        buttonText: "Get Started",
+    },
+    {
+        title: "Pro",
+        price: "$29",
+        duration: "/month",
+        forWhom: "For growing businesses",
+        mostPopular: true,
+        features: [
+            "Advanced analytics",
+            "Up to 20 projects",
+            "Priority support",
+            "Custom domains",
+        ],
+        buttonText: "Start Free Trial",
+    },
+    {
+        title: "Business",
+        price: "$99",
+        duration: "/month",
+        forWhom: "For larger teams",
+        features: [
+            "Enterprise analytics",
+            "Unlimited projects",
+            "24/7 phone support",
+            "Custom integrations",
+            "SLA guarantee",
+        ],
+        buttonText: "Contact Sales",
+    },
+    {
+        title: "Enterprise",
+        price: "Custom",
+        forWhom: "For organizations",
+        features: [
+            "Custom analytics",
+            "Dedicated support team",
+            "Custom contracts",
+            "On-premise options",
+            "Advanced security",
+        ],
+        buttonText: "Talk to Sales",
+    },
+];

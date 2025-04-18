@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root {
+  --font-default: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body,
+h1 {
+  font-family: var(--font-default);
+}
