@@ -1,5 +1,5 @@
 import { LineChart } from "lucide-react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { useAuth } from "#context";
 
 export const NavBar = () => {
@@ -62,9 +62,9 @@ export const NavBar = () => {
 
                     <div className="hidden md:flex justify-center items-center space-x-8">
                         {navLinks.map(({ label, href }) => (
-                            <a key={label} href={href} className="text-gray-600 hover:text-blue-600">
+                            <Link key={label} to={href} className="text-gray-600 hover:text-blue-600">
                                 {label}
-                            </a>
+                            </Link>
                         ))}
                         {renderAuthButton()}
                     </div>

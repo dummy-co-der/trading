@@ -5,7 +5,6 @@ import { CalendarIcon, TrendingUpIcon } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 export const Home = () => {
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
