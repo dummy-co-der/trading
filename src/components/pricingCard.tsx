@@ -37,7 +37,6 @@ export const PricingCard = ({
                     </ul>
                 </div>
 
-                {/* <button className="mt-8 w-full cursor-pointer py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"> */}
                 <button className={`mt-8 w-full cursor-pointer py-2 px-4 rounded-lg ${mostPopular ? "bg-blue-600 hover:bg-blue-700 text-white" : "bg-white border border-blue-600 text-black hover:bg-blue-600 hover:text-white"} transition`}>
                     {buttonText}
                 </button>

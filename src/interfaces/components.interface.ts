@@ -19,3 +19,25 @@ export interface CalculatorCardProps {
     setMonthlyGrowth: (val: string) => void;
     onRun: () => void;
 }
+
+export interface PortfolioCardProps {
+    groupName: string;
+    startMargin: number;
+    perValue: number;
+    maxHolding: number;
+    onDelete: () => void;
+    onEdit: () => void;
+    onCancel: () => void;
+    onSave: () => void;
+    isEditing: boolean;
+    editedData?: Partial<PortfolioCardProps>;
+    onChange?: (field: keyof PortfolioCardProps, value: string) => void;
+}
+
+export interface PortfolioGroup {
+    id: string;
+    name: string;
+    startMargin: number;
+    perValue: number;
+    maxHolding: number;
+}
