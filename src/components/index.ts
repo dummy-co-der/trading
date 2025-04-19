@@ -4,3 +4,4 @@ export * from "./navbar";
 export * from "./pricingCard";
 export * from "./calculatorCard";
 export * from "./portfolioCard";
+export * from "./simulationSteps";

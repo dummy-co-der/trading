@@ -5,3 +5,6 @@ export * from "./pricing";
 export * from "./login";
 export * from "./signup";
 export * from "./portfolio";
+export * from "./strategy";
+export * from "./screener";
+export * from "./simulator";

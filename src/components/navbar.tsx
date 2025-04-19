@@ -51,6 +51,11 @@ export const NavBar = () => {
     };
 
     const navLinks = isAuthenticated ? privateNavLinks : publicNavLinks;
+    const getLinkClasses = (href: string) => {
+        return pathname === href
+            ? "text-blue-600 font-bold"
+            : "text-gray-600 hover:text-blue-600";
+    };
 
     return (
         <div className="border-b border-gray-200">
@@ -72,7 +77,7 @@ export const NavBar = () => {
                             <Link
                                 key={label}
                                 to={href}
-                                className="text-gray-600 hover:text-blue-600"
+                                className={getLinkClasses(href)}
                             >
                                 {label}
                             </Link>
@@ -100,7 +105,7 @@ export const NavBar = () => {
                                 key={label}
                                 to={href}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="text-gray-700 hover:text-blue-600"
+                                className={getLinkClasses(href)}
                             >
                                 {label}
                             </Link>

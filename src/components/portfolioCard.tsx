@@ -24,18 +24,21 @@ export const PortfolioCard = ({
         const isCurrency = fieldKey === "startMargin";
         const displayValue = isCurrency && !isEditing ? `$${value}` : value;
 
-        return isEditing ? (
-            <InputField
-                type="text"
-                label={inputLabel ?? ""}
-                value={(editedData?.[fieldKey] ?? value) as string | number}
-                onChange={(e) => onChange?.(fieldKey, e.target.value)}
-            />
-        ) : (
+        if (isEditing) {
+            return (
+                <InputField
+                    type="text"
+                    label={inputLabel ?? ""}
+                    value={(editedData?.[fieldKey] ?? value) as string | number}
+                    onChange={(e) => onChange?.(fieldKey, e.target.value)}
+                    placeholder={fieldKey === "groupName" && !editedData?.groupName ? "Enter group name" : undefined}
+                />
+            );
+        }
+
+        return (
             <div className="flex flex-col w-full">
-                {inputLabel && (
-                    <span className="text-sm text-gray-500 mb-1">{inputLabel}</span>
-                )}
+                {inputLabel && <span className="text-sm text-gray-500 mb-1">{inputLabel}</span>}
                 <span className="font-semibold text-sm text-gray-800">{displayValue}</span>
             </div>
         );
@@ -66,15 +69,15 @@ export const PortfolioCard = ({
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-4 pt-6">
-                    <div className="flex-1">
-                        {renderTextOrInput("startMargin", startMargin, "Start Margin")}
-                    </div>
-                    <div className="flex-1">
-                        {renderTextOrInput("perValue", perValue, "Per Value (RULE-001)")}
-                    </div>
-                    <div className="flex-1">
-                        {renderTextOrInput("maxHolding", maxHolding, "Max Holding (RULE-002)")}
-                    </div>
+                    {[
+                        { key: "startMargin", value: startMargin, label: "Start Margin" },
+                        { key: "perValue", value: perValue, label: "Per Value (RULE-001)" },
+                        { key: "maxHolding", value: maxHolding, label: "Max Holding (RULE-002)" },
+                    ].map(({ key, value, label }) => (
+                        <div key={key} className="flex-1">
+                            {renderTextOrInput(key as keyof PortfolioCardProps, value, label)}
+                        </div>
+                    ))}
                 </div>
 
                 {isEditing && (

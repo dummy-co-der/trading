@@ -8,6 +8,7 @@ export const InputField = ({
     placeholder = "",
     prefix,
     icon,
+    suffix,
 }: InputFieldProps) => (
     <div className="mb-4 space-y-2">
         <label className="block text-sm font-medium text-muted-foreground">{label}</label>
@@ -27,6 +28,11 @@ export const InputField = ({
             {icon && (
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">
                     {icon}
+                </span>
+            )}
+            {suffix && (
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+                    {suffix}
                 </span>
             )}
         </div>

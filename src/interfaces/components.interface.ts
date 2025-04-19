@@ -40,4 +40,5 @@ export interface PortfolioGroup {
     startMargin: number;
     perValue: number;
     maxHolding: number;
+    isNew?: boolean;
 }
