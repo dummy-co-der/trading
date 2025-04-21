@@ -26,6 +26,12 @@ export const InfoBox = ({ icon, title, description, color }: InfoBoxProps) => {
             titleText: "text-green-800",
             descText: "text-green-600",
         },
+        gray: {
+            bg: "bg-gray-200",
+            border: "border-gray-100",
+            titleText: "text-gray-800",
+            descText: "text-gray-600",
+        },
     };
 
     const current = colorMap[color];

@@ -30,5 +30,5 @@ export interface InfoBoxProps {
     icon?: React.ReactNode;
     title: string;
     description: string;
-    color: "blue" | "red" | "yellow" | "green";
+    color: "blue" | "red" | "yellow" | "green" | "gray";
 }
