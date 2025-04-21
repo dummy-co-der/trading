@@ -119,7 +119,14 @@ npm install
 npm run dev
 ```
 
----
+### 4. Project Screenshot
+
+![Laptop View](./src/assets/laptopView.png)
+
+<div align="center">
+  <img src="./src/assets/tabletView.png" alt="Tablet View" height="500px" width="45%" style="margin-right: 10px;" />
+  <img src="./src/assets/mobileView.png" alt="Mobile View" height="500px" />
+</div>
 
 ## 📌 Future Scope
 
